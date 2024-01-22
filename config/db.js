@@ -10,10 +10,11 @@ const db = new Sequelize(process.env.BD_NOMBRE,process.env.BD_USER,process.env.B
             timestamps: true
     },
     pool: {
-        max: 10,
-        min: 0,
+        max: 15,
+        min: 5,
         acquire:30000,
-        idle: 10000
+        idle: 20000,
+        evict: 15000
     },
     operatorAliases: false
 });
