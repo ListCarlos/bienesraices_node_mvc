@@ -16,7 +16,7 @@ const inicio = async (req,res) => {
             include: [
                 {
                     model: Precio,
-                    as: 'Precio'
+                    as: 'precio'
                 }
             ],
             order: [
@@ -31,7 +31,7 @@ const inicio = async (req,res) => {
             include: [
                 {
                     model: Precio,
-                    as: 'Precio'
+                    as: 'precio'
                 }
             ],
             order: [
@@ -92,7 +92,7 @@ const buscador = async (req,res) => {
             }
         },
         include: [
-            {model: Precio, as: 'Precio'}
+            {model: Precio, as: 'precio'}
         ]
     })
 

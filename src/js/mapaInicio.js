@@ -50,10 +50,10 @@
             })
             .addTo(mapa)
             .bindPopup(`
-                <p class="text-indigo-600 font-bold">${propiedad?.Categoria.nombre}
+                <p class="text-indigo-600 font-bold">${propiedad?.categoria.nombre}
                 <h1 class="text-xl font-extrabold uppercase my-2">${propiedad?.titulo}</h1>
                 <img src="/uploads/${propiedad?.imagen}" alt=Imagen de la propiedad ${propiedad?.titulo}">
-                <p class="text-gray-600 font-bold">${propiedad?.Precio.nombre}
+                <p class="text-gray-600 font-bold">${propiedad?.precio.nombre}
                 <a href="/propiedad/${propiedad.id}" class="bg-indigo-600 block p-2 text-center font-bold uppercase">Ver Propiedad</a>
             `) //text-white se especifica en public->css->tailwind.css linea 6
             markers.addLayer(marker)

@@ -29,8 +29,8 @@ const admin =  async ( req, res) => {
                     UsuarioId : id
                 },
                 include: [
-                    { model: Categoria, as:'Categoria'},
-                    { model: Precio, as:'Precio'},
+                    { model: Categoria, as:'categoria'},
+                    { model: Precio, as:'precio'},
                     { model: Mensaje, as: 'mensajes'}
                 ]
             }),
@@ -342,8 +342,8 @@ const mostrarPropiedad = async (req,res) => {
     //comprobar que la propiedad exista
     const propiedad = await Propiedad.findByPk(id, {
         include: [
-            { model: Categoria, as:'Categoria'},
-            { model: Precio, as:'Precio'}
+            { model: Categoria, as:'categoria'},
+            { model: Precio, as:'precio'}
         ]
     })
 
@@ -367,8 +367,8 @@ const enviarMensaje = async (req,res) => {
     //comprobar que la propiedad exista
     const propiedad = await Propiedad.findByPk(id, {
         include: [
-            { model: Categoria, as:'Categoria'},
-            { model: Precio, as:'Precio'}
+            { model: Categoria, as:'categoria'},
+            { model: Precio, as:'precio'}
         ]
     })
 
